@@ -1,6 +1,8 @@
 <template>
     <div class="header">
+        <router-link to="/">
     <h1>Star Wars StarShips</h1>
+        </router-link>
     </div>
 </template>
 

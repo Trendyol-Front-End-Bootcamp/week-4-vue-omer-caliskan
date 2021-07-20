@@ -1,39 +1,16 @@
 <template>
-  <Header />
-  <List :starships="starships" />
+    <Header />
+  <router-view/>
 </template>
 
 <script>
-import Header from './components/Header.vue' 
-import List from './components/List.vue'
-
-import axios from 'axios';
-
+import Header from './components/Header.vue';
 
 export default {
-  name: 'App',
-  data(){
-    return{
-      starships : null
-    };
-  },
-  created(){
-    this.getStarships();
-  },
-  components: {
-    Header,
-    List
-  },
-  methods: {
-    getStarships(){
-          axios
-                .get("https://swapi.dev/api/starships/")
-                .then((response) => (this.starships = response.data.results));
+  components:{
+    Header
   }
-  }
-  
-};
-
+}
 </script>
 
 <style>
@@ -58,11 +35,9 @@ ul {
 }
 a {
   text-decoration: none;
-}
-
-body {
-  background-color: #000;
   color: #FFE81F;
 }
-
+body {
+  background-color: #000;
+}
 </style>

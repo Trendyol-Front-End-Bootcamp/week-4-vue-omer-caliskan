@@ -1,20 +1,27 @@
 <template>
     <div class="list">
-            <div class="item" v-for="item in starships" :key="item.id">
-                <h2>{{ item.name }} </h2> 
-                <div class="item-text-image"> 
+        <div class="item" v-for="item in starships" :key="item.id">
+            <router-link :to="{ name: 'Details', params : { id : item.url.split('/')[5] }}">
+            <h2>{{ item.name }} </h2> 
+            <div class="item-text-image"> 
                 <div class="item-image"> 
-                <img src="../assets/images/x-wing.svg" />
+                    <img src="../assets/images/x-wing.svg" alt="starship" />
                 </div>
+                
                 <div class="item-text">
-                <h3>Model<h4>{{ item.model }}</h4> </h3>
-                
-                <h3>Hyperdrive Rating<h4>{{ item.hyperdrive_rating }}</h4></h3>
-                
+                    <h3>Model
+                        <h4>{{ item.model }}</h4> 
+                    </h3>
+
+                    <h3>Hyperdrive Rating
+                        <h4>{{ item.hyperdrive_rating }}</h4>
+                    </h3>
                 </div>
             </div>
-            </div>
+            </router-link>
+        </div>
     </div>
+    
 </template>
 
 <script>
@@ -36,6 +43,11 @@ export default {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin: 5%;
+}
+
+a {
+    width: 100%;
+    height: 100%;
 }
 
 .item-text-image{
