@@ -39,7 +39,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    margin: 5%;
+    margin: 20px 5%;
 }
 
 a {
@@ -61,6 +61,15 @@ a {
     background-size: 170%;
     background-position-x: 20%;
     background-position-y: 40%;
+    transition: 1s ease;
+}
+
+.item:hover{
+    transition: 2s ease;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 300%;
+    transform: scale(1.07);
 }
 
 .item-text-image img{
