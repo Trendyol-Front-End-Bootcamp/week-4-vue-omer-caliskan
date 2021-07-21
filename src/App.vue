@@ -38,7 +38,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #FFE81F;
 }
 
 h1{

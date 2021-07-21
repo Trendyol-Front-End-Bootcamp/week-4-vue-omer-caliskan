@@ -1,4 +1,5 @@
 <template>
+  <BackButton />
   <div class="details">
     <div class="detail-item">
       <h1> {{ starship.name }} </h1>
@@ -22,8 +23,12 @@
 
 <script>
 import axios from 'axios';
+import BackButton from '../components/BackButton.vue'
 export default {
   name: "Details",
+  components:{
+    BackButton
+  },
   data(){
     return{
       starship : null
@@ -54,7 +59,6 @@ export default {
   background-position-y: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 100px;
   border-radius: 25px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
