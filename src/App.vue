@@ -11,6 +11,7 @@ export default {
     Header
   }
 }
+
 </script>
 
 <style>
@@ -30,14 +31,22 @@ export default {
   'Segoe UI Emoji',
   'Segoe UI Symbol';
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
   color: #FFE81F;
 }
+
+h1{
+  color: #FFE81F;
+}
+
 body {
   background-color: #000;
 }
+
 </style>

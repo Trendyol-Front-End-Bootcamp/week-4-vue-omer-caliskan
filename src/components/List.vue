@@ -1,7 +1,7 @@
 <template>
     <div class="list">
         <div class="item" v-for="item in starships" :key="item.id">
-            <router-link :to="{ name: 'Details', params : { id : item.url.split('/')[5] }}">
+            <router-link :to="{ name: 'Details', params : { id : item.url.split('/')[5]}}">
             <h2>{{ item.name }} </h2> 
             <div class="item-text-image"> 
                 <div class="item-image"> 
@@ -29,9 +29,6 @@ export default {
     name: 'List',
     props: {
         starships: Array
-    },
-    data(){
-
     }
 }
 </script>
