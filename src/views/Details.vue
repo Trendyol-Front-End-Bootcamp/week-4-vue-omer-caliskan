@@ -57,7 +57,7 @@ export default {
 
 .details{
   text-align: center;
-  padding: 200px;
+  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +74,7 @@ export default {
   height: 50%;
   border: 1px solid whitesmoke;
   padding: 15px;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.8);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 

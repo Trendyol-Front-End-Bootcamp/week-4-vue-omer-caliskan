@@ -15,9 +15,9 @@ export default {
 <style scoped>
 
 .backbutton{
-    font-size: 60px;    
-    height: 80px;
-    width: 80px;
+    font-size: 40px;    
+    height: 50px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,20 +27,20 @@ export default {
     margin-top: 50px;
     background: #FFE81F;
     position:absolute;
-    box-shadow: 0 0 10px rgba(255,255,255);
+    box-shadow: 0 0 10px whitesmoke;
     cursor: pointer;
     transition: 0.5s ease;
 }
 
 .backbutton span{
     transform: translate(-2px, -5px);
-    color: white;
+    color: whitesmoke;
 }
 
 .backbutton:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 1s ease;
-    box-shadow: 0 0 20px rgba(255,255,255);
+    box-shadow: 0 0 15px whitesmoke;
 }
 
 </style>

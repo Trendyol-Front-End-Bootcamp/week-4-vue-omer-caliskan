@@ -63,6 +63,8 @@ a {
     background-position-x: 20%;
     background-position-y: 40%;
     transition: 1s ease;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .item:hover{
@@ -80,7 +82,7 @@ a {
 }
 
 .item-text h3{
-    padding: 30px;
+    padding: 10px;
 } 
 
 .item-text h4{
