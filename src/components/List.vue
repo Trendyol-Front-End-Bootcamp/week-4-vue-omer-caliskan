@@ -37,7 +37,7 @@ export default {
 
 .list{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin: 20px 5%;
 }
@@ -58,6 +58,7 @@ a {
     border: 1px solid whitesmoke;
     box-shadow: 0 5px 10px rgba(245, 245, 245, 0.5);
     background: url(../assets/images/space.jpg);
+    background-repeat: no-repeat;
     background-size: 170%;
     background-position-x: 20%;
     background-position-y: 40%;
