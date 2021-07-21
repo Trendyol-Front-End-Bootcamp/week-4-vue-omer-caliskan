@@ -26,3 +26,5 @@ Developing a Vue application that prints Starships and its detail pages using th
 - npm run build
 
 ## Demo Site
+
+[Star Wars Starships](https://omerc-star-wars-api.netlify.app)
