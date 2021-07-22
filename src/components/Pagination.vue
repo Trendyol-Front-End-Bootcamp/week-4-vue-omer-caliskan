@@ -1,7 +1,7 @@
 <template>
     <div class="pagination">
-        <button v-if="page!=1" @click="PrevPage(page)">Prev</button>
-        <button v-if="pageNext" @click="NextPage(page)">Next</button>
+        <button class="prev" v-if="page!=1" @click="PrevPage(page)">Prev</button>
+        <button class="next" v-if="pageNext" @click="NextPage(page)">Next</button>
             
         </div>
 </template>
@@ -42,6 +42,19 @@ export default {
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.pagination button:hover{
+    box-shadow: 0 0 5px whitesmoke;
+}
+
+.next:hover{
+    transform: translateX(8px);
+}
+
+.prev:hover{
+    transform: translateX(-8px);
 }
 
 </style>
