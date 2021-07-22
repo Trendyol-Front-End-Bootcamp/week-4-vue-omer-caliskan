@@ -1,7 +1,7 @@
 <template>
     <div class="search">
         <span>Search by Name or Model: </span>
-        <input type="text" placeholder="Search" v-model="searchText" v-on:keyup.enter="Search()">
+        <input type="text" placeholder="Press Enter for Search" v-model="searchText" v-on:keyup.enter="Search()">
         <button v-if="searchText!='' " @click="ClearText()">Clear</button>
     </div>
     
