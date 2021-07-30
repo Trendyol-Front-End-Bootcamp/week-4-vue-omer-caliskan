@@ -75,7 +75,13 @@ a {
     transform: scale(1.07);
 }
 
+.item:hover img{
+    transform: rotateZ(15deg);
+    transition: 2s ease;
+}
+
 .item-text-image img{
+    transition: 2s ease;
     width: 100%;
     height: 100%;
     padding: 20px;
