@@ -1,7 +1,8 @@
 <template>
   <Loading v-if="loading" /> 
-  <BackButton v-if="!loading" />
-  <div v-if="!loading" class="details">
+  <div v-else> 
+  <BackButton />
+  <div class="details">
     <div class="detail-item">
       <h1> {{ starship.name }} </h1>
       <div class="item-image-text">
@@ -20,12 +21,14 @@
     </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
-import axios from 'axios';
-import BackButton from '../components/BackButton.vue';
+import BackButton from '../components/BackButton.vue'
 import Loading from '../components/Loading.vue'
+import { getStarship } from '../service/service.js' ;
+
 export default {
   name: "Details",
   components:{
@@ -35,20 +38,18 @@ export default {
   data(){
     return{
       starship : null,
-      loading : true
+      loading : false
     };
   },
   created(){
-    this.starship = this.getStarship(this.$route.params.id);
+    this.getSingleStarship(this.$route.params.id)
   },
-  methods: {
-    async getStarship(id){
-      await new Promise(r => setTimeout(r, 200));
-          axios
-                .get(`https://swapi.dev/api/starships/${id}/`)
-                .then((response) => (this.starship = response.data));
-                this.loading = false;
-  }
+  methods:{
+    async getSingleStarship(id){
+      this.loading = true
+      this.starship = await getStarship(id)
+      this.loading = false
+    }
   }
 }
 </script>

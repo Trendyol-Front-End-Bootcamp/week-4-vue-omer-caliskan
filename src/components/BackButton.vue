@@ -33,7 +33,7 @@ export default {
 }
 
 .backbutton span{
-    transform: translate(-2px, -5px);
+    transform: translate(-2px, -0px);
     color: whitesmoke;
 }
 

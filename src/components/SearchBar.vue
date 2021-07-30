@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import axios from 'axios'
 import List from './List.vue'
 import Pagination from './Pagination.vue'
 import NotFound from './NotFound.vue'
 import Loading from './Loading.vue'
+import { getStarshipsByPageandSearchText } from '../service/service.js' ;
 
 export default {
     name: "SearchBar",
@@ -39,13 +39,12 @@ export default {
         Pagination
     },
     methods:{
-    async Search(){
-        await new Promise(r => setTimeout(r, 200));
-            axios
-                .get(`https://swapi.dev/api/starships/?page=${this.page}&search=${this.searchText}`)
-                .then((response) => {this.starships = response.data.results;
-                this.pageNext = response.data.next});
-                this.loading = false;
+    async Search(...event){
+        this.loading = true
+        const data = await getStarshipsByPageandSearchText(event || this.page, this.searchText)
+        this.starships = data.starships
+        this.pageNext = data.pageInfo
+        this.loading = false;
         },
     ClearText(){
         this.searchText = "";
@@ -53,7 +52,7 @@ export default {
     },
     NewPage(event){
         this.page = event;
-        this.Search();
+        this.Search(event);
     }
     },
     created(){
