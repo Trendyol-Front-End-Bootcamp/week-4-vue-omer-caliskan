@@ -19,6 +19,6 @@ export const getStarship = async (id) => {
         .get(`https://swapi.dev/api/starships/${id}/`)
         .then((response) => (starship = response.data))
         .catch((error) => error)
-
+    
     return starship          
 }

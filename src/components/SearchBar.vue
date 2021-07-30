@@ -6,7 +6,7 @@
     </div>
     
     <Pagination @newPage="NewPage($event)" :page="page" :pageNext="pageNext" />
-        <Loading v-if="loading" />
+    <Loading v-if="loading" />
 
     <List v-if="!loading && starships.length>0" :starships="starships" />
 
@@ -71,6 +71,7 @@ export default {
     align-items: center;
     gap: 30px;
     color: white;
+    background-color: rgba(0,0,0,0.8);
 }
 
 .search input{

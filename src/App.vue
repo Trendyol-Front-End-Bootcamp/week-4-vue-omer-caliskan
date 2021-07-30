@@ -45,7 +45,7 @@ h1{
 }
 
 body {
-  background-color: #000;
+  background: url(./assets/images/stars.jpg);
 }
 
 </style>

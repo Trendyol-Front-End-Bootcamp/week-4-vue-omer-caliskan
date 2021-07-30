@@ -22,23 +22,26 @@
     </div>
   </div>
   </div>
+  
 </template>
 
 <script>
 import BackButton from '../components/BackButton.vue'
 import Loading from '../components/Loading.vue'
+import NotFound from '../components/NotFound.vue'
 import { getStarship } from '../service/service.js' ;
 
 export default {
   name: "Details",
   components:{
     BackButton,
-    Loading
+    Loading,
+    NotFound
   },
   data(){
     return{
-      starship : null,
-      loading : false
+      starship : {},
+      loading : true
     };
   },
   created(){
@@ -47,7 +50,7 @@ export default {
   methods:{
     async getSingleStarship(id){
       this.loading = true
-      this.starship = await getStarship(id)
+      this.starship = await getStarship(id) || {}
       this.loading = false
     }
   }
@@ -75,7 +78,7 @@ export default {
   height: 50%;
   border: 1px solid whitesmoke;
   padding: 15px;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.9);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
