@@ -70,7 +70,7 @@ describe("Starship List", () => {
     it("should return {} when there's an error", async () => {
         axios.get.mockImplementation(() => {
             return Promise.reject({
-                data: [],
+                data: {},
             });
         });
 
@@ -116,7 +116,7 @@ describe("Single Starship with Details", () => {
     it("should return null when there's an error", async () => {
         axios.get.mockImplementation(() => {
             return Promise.reject({
-                data: [],
+                data: {},
             });
         });
 
