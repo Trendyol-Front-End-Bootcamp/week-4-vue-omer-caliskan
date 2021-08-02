@@ -14,11 +14,11 @@ export const getStarshipsByPageandSearchText = async (page, searchText) => {
 }
 
 export const getStarship = async (id) => {
-    let starship
+    let starship = {}
     await axios
         .get(`https://swapi.dev/api/starships/${id}/`)
         .then((response) => (starship = response.data))
         .catch((error) => error)
-    
+
     return starship          
 }
